@@ -1,5 +1,4 @@
 const canvas = document.getElementById("myCanvas");
-canvas.height = window.innerHeight;
 canvas.width = 200;
 
 // Contains all the methods that we need to draw the things in this project
@@ -11,6 +10,7 @@ animate();
 
 function animate() {
     car.update();
+    canvas.height = window.innerHeight;
     car.draw(ctx);
     requestAnimationFrame(animate);
 }
