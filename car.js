@@ -15,6 +15,10 @@ class Car {
     }
 
     update() {
+        this.#move();
+    }
+
+    #move() {
         // Car physics (I Could use Box2D)
         if (this.controls.forward) {
             this.speed += this.acceleration;
@@ -52,8 +56,8 @@ class Car {
 
         this.x -= Math.sin(this.angle) * this.speed;
         this.y -= Math.cos(this.angle) * this.speed;
-
     }
+
     // Draw a car
     draw(ctx) {
         // Making the rotation of the car
